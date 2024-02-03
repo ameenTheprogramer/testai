@@ -41,7 +41,7 @@ def open_firefox_and_fill_username(url):
 
     finally:
         # Close the browser window
-        driver.quit()
+       open_firefox_and_fill_username(url_to_open)
 
 if __name__ == "__main__":
     url_to_open = "https://www.clickasnap.com"
