@@ -1,11 +1,13 @@
 from selenium import webdriver
+from selenium.webdriver.firefox.service import Service
 
 def main():
     # Path to the geckodriver executable
     geckodriver_path = "/usr/local/bin/geckodriver"
 
     # Create a Firefox webdriver
-    driver = webdriver.Firefox(executable_path=geckodriver_path)
+    service = Service(geckodriver_path)
+    driver = webdriver.Firefox(service=service)
 
     try:
         # Navigate to clickasnap.com
